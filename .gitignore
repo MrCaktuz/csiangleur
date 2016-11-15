@@ -1,0 +1,15 @@
+build
+node_modules
+
+FTP-files
+
+design/psd
+cahier.pages
+src/fonts
+
+dev/*
+!dev/wp-content/
+dev/wp-content/*
+!dev/wp-content/themes/
+dev/wp-content/themes/*
+!dev/wp-content/themes/mainTheme/

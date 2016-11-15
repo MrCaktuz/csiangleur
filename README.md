@@ -41,9 +41,36 @@ Le projet consiste à faire un site pour l'Maison Médicale d’Angleur – Cent
 
 **Page "Fonctionnement" :**
 
+- Inscription
+- Désinscription
+- Service de garde
+    - Fonctionnement
+    - Remboursement
+
 **Page "Activités du centre"" :**
+
+- Fiches pratiques thématiques
+    - Vaccinations pour les enfants
+    - La Gripe
+- Inscription à la News letter
 
 **Page "Contact" :**
 
+- Coordonnées
+- Google map
+- Services
+    - fiche personnelle
+        - Photo
+        - Nom - Prénom
+        - Service
+        - Horaire
+- Formulaire de contact
+
 **Page "Liens utiles" :**
-# csiangleur
+
+- INAMI
+- Fédération maison médicale
+- Service de garde
+- ...
+
+- - -

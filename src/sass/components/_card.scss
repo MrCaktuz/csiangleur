@@ -1,0 +1,181 @@
+/* csiangleur
+ *
+ * /sass/components/_card.scss - Esthetic style for card
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.card{
+    padding: 0 4rem 4rem 4rem;
+    box-shadow: $mainShadow;
+    &__home{
+        position: relative;
+        width: 31.818181818%;
+        min-width: 31rem;
+        margin: 7rem 0 4rem 2rem;
+        float: left;
+        &:first-of-type{
+            margin-left: 0;
+        }
+    }
+    &__fiches{
+        position: relative;
+        width: 31.818181818%;
+        margin: 4rem 2.272727273% 0 0;
+        padding-top: 4rem;
+        float: left;
+        font-size: 2rem;
+        text-align: center;
+        &:first-of-type{
+            margin-left: 0;
+        }
+        &:nth-child( 3n ){
+            margin-right: 0;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+    &__links{
+        position: relative;
+        width: 70.8333%;
+        margin: 4rem auto 0;
+        padding-top: 4rem;
+        font-size: 1.8rem;
+        line-height: 1.7;
+    }
+    &__title{
+        font-size: 0;
+        text-align: center;
+        &::before{
+            position: relative;
+            top: -3.25rem;
+            display: inline-block;
+            min-width: 6.5rem;
+            padding: 0.3em;
+            font-size: 4rem;
+            font-family: $icon;
+            text-align: center;
+            background-color: $titleBcg;
+            border-radius: 50%;
+        }
+        &--newsletter::before{
+            content: "";
+        }
+        &--schedule::before{
+            content: "";
+        }
+        &--contact::before{
+            content: "";
+        }
+    }
+    &__text{
+        font-size: 1.8rem;
+        line-height: 1.7;
+        text-align: center;
+    }
+}
+
+.idCard{
+    position: relative;
+    width: 27.777777778%;
+    min-width: 30.5rem;
+    margin: 14rem 2.173913043% 0 2.173913043%;
+    padding: 14rem 4rem 4rem 4rem;
+    float: left;
+    &__picWrap{
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    &__picture{
+        width: 15rem;
+        height: 20rem;
+        overflow: hidden;
+        & img{
+            width: 15rem;
+        }
+    }
+    &__title{
+        margin-bottom: 0.5em;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    &__function{
+        display: block;
+        margin-bottom: 1em;
+        font-size: 1.8rem;
+        font-weight: normal;
+        line-height: 1.7;
+    }
+    &__shedule{
+        // margin: 0 auto 4rem;
+    }
+    &:nth-child(odd){
+
+    }
+    &:nth-child(even){
+
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 1150px) {
+    .idCard{
+        width: 45.652173913%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .card{
+        &__home{
+            width: 50%;
+            margin: 8rem auto 8rem;
+            float: none;
+            &:first-of-type{
+                margin: 8rem auto 0;
+            }
+        }
+        &__fiches{
+            width: 48.863636364%;
+            &:nth-child( 2n ){
+                margin-right: 0;
+            }
+            &:nth-child( 3n ){
+                margin-right: 2.272727273%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .idCard{
+        width: 80%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card{
+        &__fiches{
+            width: 100%;
+        }
+        &__links{
+            width: 91.666666667%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .card{
+        &__home{
+            min-width: 29rem;
+        }
+    }
+}

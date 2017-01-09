@@ -1,0 +1,88 @@
+/* csiangleur
+ *
+ * /sass/objects/_nav.scss - Non-esthetic style for nav
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.mainNav{
+    position: relative;
+    margin-top: 4rem;
+    z-index: 2;
+    background-color: $white;
+    box-shadow: $mainShadow;
+    &__list{
+        font-size: 1.8rem;
+        text-align: center;
+        transition: 0.2s ease-in-out;
+    }
+    &__listElt{
+        display: inline-block;
+    }
+    &__listLink{
+        display: block;
+        padding: 1.4em 0.5em;
+    }
+    &__label{
+        display: none;
+        &::after{
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.2em auto 0;
+            transform: rotate(45deg);
+            border-right: 0.2rem solid $borderColorNavIcon;
+            border-bottom: 0.2rem solid $borderColorNavIcon;
+        }
+    }
+    &__input{
+        display: none;
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 810px) {
+    .mainNav{
+        &__list{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .mainNav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        &__list{
+            height: 0;
+            overflow: hidden;
+        }
+        &__listElt{
+            display: block;
+        }
+        &__label{
+            display: block;
+            padding: 1.4em 0.5em;
+            font-family: $openSansStack;
+            font-size: 1.8rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        &__input:checked ~ &__list{
+            height: auto;
+        }
+        &__input:checked ~ &__label{
+            &::after{
+                margin-top: 0.8em;
+                border-top: 0.2rem solid $borderColorNavIcon;
+                border-left: 0.2rem solid $borderColorNavIcon;
+                border-right: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}

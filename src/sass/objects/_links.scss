@@ -1,0 +1,19 @@
+/* csiangleur
+ *
+ * /sass/objects/_links.scss - Non Esthetic style for links
+ *
+ * coded by Mucht!
+ */
+
+ .link{
+     text-decoration: none;
+     color: $black;
+     transition: 0.1s ease-in-out;
+     &--active{
+         font-weight: bold;
+     }
+     &:hover{
+         font-weight: bold;
+         font-size: 1.7rem;
+     }
+ }

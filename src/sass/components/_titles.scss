@@ -1,0 +1,19 @@
+/* csiangleur
+ *
+ * /sass/components/_titles.scss - Esthetic style for titles
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+ .title{
+     font-family: $philosopherStack;
+     &__page{
+         font-size: 4rem;
+         margin: 4rem 0 0 4.166666667%;
+     }
+     &__section{
+         font-size: 3rem;
+         margin-bottom: 1em;
+     }
+ }

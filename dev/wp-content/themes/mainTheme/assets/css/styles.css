@@ -1,0 +1,1032 @@
+@charset "UTF-8";
+/* csiangleur
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Mucht
+ */
+/* csiangleur
+ *
+ * /sass/settings/_paths.scss - Global paths variables
+ *
+ * coded by Mucht
+ */
+/* csiangleur
+ *
+ * /sass/settings/_colors.scss - Global colors variables
+ *
+ * coded by Mucht
+ * Started at 28/11/2016
+ */
+/* csiangleur
+ *
+ * /sass/settings/_fonts.scss - Global fonts variables & fonts loading
+ *
+ * coded by Mucht
+ */
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-Italic.eot");
+  src: url("../fonts/philosopher/Philosopher-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-Italic.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-Italic.woff") format("woff"), url("../fonts/philosopher/Philosopher-Italic.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-Italic.svg#Philosopher-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-Bold.eot");
+  src: url("../fonts/philosopher/Philosopher-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-Bold.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-Bold.woff") format("woff"), url("../fonts/philosopher/Philosopher-Bold.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-Bold.svg#Philosopher-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-Italic_1.eot");
+  src: url("../fonts/philosopher/Philosopher-Italic_1.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-Italic_1.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-Italic_1.woff") format("woff"), url("../fonts/philosopher/Philosopher-Italic_1.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-Italic_1.svg#Philosopher-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher.eot");
+  src: url("../fonts/philosopher/Philosopher.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher.woff2") format("woff2"), url("../fonts/philosopher/Philosopher.woff") format("woff"), url("../fonts/philosopher/Philosopher.ttf") format("truetype"), url("../fonts/philosopher/Philosopher.svg#Philosopher") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher_1.eot");
+  src: url("../fonts/philosopher/Philosopher_1.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher_1.woff2") format("woff2"), url("../fonts/philosopher/Philosopher_1.woff") format("woff"), url("../fonts/philosopher/Philosopher_1.ttf") format("truetype"), url("../fonts/philosopher/Philosopher_1.svg#Philosopher") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-BoldItalic.eot");
+  src: url("../fonts/philosopher/Philosopher-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-BoldItalic.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-BoldItalic.woff") format("woff"), url("../fonts/philosopher/Philosopher-BoldItalic.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-BoldItalic.svg#Philosopher-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-Bold_1.eot");
+  src: url("../fonts/philosopher/Philosopher-Bold_1.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-Bold_1.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-Bold_1.woff") format("woff"), url("../fonts/philosopher/Philosopher-Bold_1.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-Bold_1.svg#Philosopher-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Philosopher';
+  src: url("../fonts/philosopher/Philosopher-BoldItalic_1.eot");
+  src: url("../fonts/philosopher/Philosopher-BoldItalic_1.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher/Philosopher-BoldItalic_1.woff2") format("woff2"), url("../fonts/philosopher/Philosopher-BoldItalic_1.woff") format("woff"), url("../fonts/philosopher/Philosopher-BoldItalic_1.ttf") format("truetype"), url("../fonts/philosopher/Philosopher-BoldItalic_1.svg#Philosopher-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/opensans-regular-webfont.eot");
+  src: url("../fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("../fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/opensans-italic-webfont.eot");
+  src: url("../fonts/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../fonts/open-sans/opensans-italic-webfont.woff") format("woff"), url("../fonts/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../fonts/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/opensans-semibold-webfont.eot");
+  src: url("../fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/opensans-bold-webfont.eot");
+  src: url("../fonts/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/open-sans/opensans-bold-webfont.woff") format("woff"), url("../fonts/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/open-sans/opensans-bolditalic-webfont.eot");
+  src: url("../fonts/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../fonts/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../fonts/open-sans/opensans-bolditalic-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* csiangleur
+ *
+ * /sass/settings/_sizes.scss - Global sizes variables
+ *
+ * coded by Mucht
+ */
+/* => Nom du site
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by Mucht
+ */
+.hidden {
+  position: absolute;
+  color: transparent; }
+
+.clear {
+  clear: both; }
+
+.clear::after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/* csiangleur
+ *
+ * /sass/generic/_meyer-reset.scss - Eric Meyer's CSS reset - http://meyerweb.com/eric/tools/css/reset/
+ *
+ * coded by Mucht
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* csiangleur
+ *
+ * /sass/generic/_box-sizing.scss - box-sizing reset
+ *
+ * coded by Mucht
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* csiangleur
+  *
+  * /sass/base/_root.scss - Base styles for root element
+  *
+  * coded by Mucht
+  * Started at 28/11/2016
+  */
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px; }
+
+body {
+  margin-bottom: 36rem; }
+
+.content {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+
+.wrap {
+  padding: 0 4.166666667%; }
+  .wrap__fiches {
+    position: relative;
+    margin-bottom: 6rem; }
+  .wrap__idCard {
+    width: 100%;
+    margin: 0 auto; }
+
+p {
+  font-size: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1em; }
+  p:last-of-type {
+    margin-bottom: 0; }
+
+strong {
+  font-weight: bold; }
+
+@media screen and (max-width: 650px) {
+  body {
+    margin-bottom: 0; } }
+
+/* csiangleur
+ *
+ * /sass/objects/_header.scss - Non-Esthetic style for header
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.header {
+  padding-top: 4rem;
+  background-color: #fff; }
+  .header__logo {
+    width: 15rem;
+    height: auto;
+    margin: 0 3.125% 0 4.166666667%;
+    float: left; }
+  .header__title {
+    width: 39.583333333%;
+    margin: 3.5rem 0 0 2.083333333%;
+    font-family: "Philosopher", sans-serif;
+    font-size: 4rem;
+    line-height: 1.2;
+    float: left;
+    z-index: 2; }
+  .header__photo {
+    width: 100%;
+    height: auto; }
+
+@media screen and (max-width: 810px) {
+  .header {
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.9) 0%, rgba(131, 181, 77, 0.9) 100%), url("../images/house.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .header__title {
+      width: 60%; }
+    .header__photo {
+      display: none; } }
+
+@media screen and (max-width: 750px) {
+  .header {
+    padding: 13.5rem 0 6rem; } }
+
+@media screen and (max-width: 520px) {
+  .header__title {
+    width: 59%;
+    font-size: 3rem; } }
+
+@media screen and (max-width: 487px) {
+  .header__title {
+    margin-top: 0; }
+  .header__logo {
+    width: 10rem; } }
+
+/* csiangleur
+ *
+ * /sass/objects/_nav.scss - Non-esthetic style for nav
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.mainNav {
+  position: relative;
+  margin-top: 4rem;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+  .mainNav__list {
+    font-size: 1.8rem;
+    text-align: center;
+    transition: 0.2s ease-in-out; }
+  .mainNav__listElt {
+    display: inline-block; }
+  .mainNav__listLink {
+    display: block;
+    padding: 1.4em 0.5em; }
+  .mainNav__label {
+    display: none; }
+    .mainNav__label::after {
+      content: "";
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0.2em auto 0;
+      transform: rotate(45deg);
+      border-right: 0.2rem solid #000;
+      border-bottom: 0.2rem solid #000; }
+  .mainNav__input {
+    display: none; }
+
+@media screen and (max-width: 810px) {
+  .mainNav__list {
+    font-size: 1.6rem; } }
+
+@media screen and (max-width: 750px) {
+  .mainNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0; }
+    .mainNav__list {
+      height: 0;
+      overflow: hidden; }
+    .mainNav__listElt {
+      display: block; }
+    .mainNav__label {
+      display: block;
+      padding: 1.4em 0.5em;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.8rem;
+      text-align: center;
+      cursor: pointer; }
+    .mainNav__input:checked ~ .mainNav__list {
+      height: auto; }
+    .mainNav__input:checked ~ .mainNav__label::after {
+      margin-top: 0.8em;
+      border-top: 0.2rem solid #000;
+      border-left: 0.2rem solid #000;
+      border-right: 0;
+      border-bottom: 0; } }
+
+/* csiangleur
+ *
+ * /sass/objects/_footer.scss - Non Esthetic style for footer
+ *
+ * coded by Mucht!
+*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem 4.166666667% 2rem;
+  background-color: #84b74e;
+  z-index: -1; }
+
+.footerSection {
+  width: 31.818181818%;
+  margin-left: 2.272727273%;
+  float: left; }
+  .footerSection:first-of-type {
+    margin-left: 0; }
+  .footerSection__listElt {
+    font-size: 1.8rem;
+    line-height: 1.7; }
+  .footerSection__copyrights {
+    display: block;
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: center; }
+    .footerSection__copyrights--link:hover {
+      font-size: 1.5rem; }
+
+.hiddenFooter {
+  padding: 0.1rem; }
+
+@media screen and (max-width: 650px) {
+  .footer {
+    position: inherit; }
+  .footerSection {
+    width: 60%;
+    margin: 0 auto 4rem;
+    float: none; }
+    .footerSection:first-of-type {
+      margin-left: auto; }
+    .footerSection__copyrights {
+      margin-top: 0; } }
+
+@media screen and (max-width: 460px) {
+  .footerSection {
+    width: 70%; } }
+
+@media screen and (max-width: 400px) {
+  .footerSection {
+    width: 80%; } }
+
+/* csiangleur
+ *
+ * /sass/objects/_links.scss - Non Esthetic style for links
+ *
+ * coded by Mucht!
+ */
+.link {
+  text-decoration: none;
+  color: #000;
+  transition: 0.1s ease-in-out; }
+  .link--active {
+    font-weight: bold; }
+  .link:hover {
+    font-weight: bold;
+    font-size: 1.7rem; }
+
+/* csiangleur
+ *
+ * /sass/components/_header.scss - Esthetic style for header
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.slogan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 4.166666667%;
+  padding: 4rem 4rem 12.2rem 4rem;
+  font-family: "Philosopher", sans-serif;
+  text-align: center;
+  background-color: rgba(132, 183, 78, 0.9);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  z-index: 1; }
+  .slogan__line--one {
+    margin-bottom: 0;
+    font-size: 3rem;
+    line-height: 1.3; }
+  .slogan__line--two {
+    margin-bottom: 0;
+    font-size: 5.7rem;
+    line-height: 1.3; }
+  .slogan__line--three {
+    margin-bottom: 0;
+    font-size: 4rem;
+    line-height: 1.3; }
+  .slogan__toggleSections {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    cursor: pointer; }
+  .slogan__sections {
+    padding-bottom: 16rem; }
+  .slogan__home {
+    padding: 34rem 4rem 4rem 4rem; }
+
+@media screen and (max-width: 810px) {
+  .slogan {
+    display: inline-block;
+    position: inherit;
+    margin: 1rem 0 0 0;
+    padding: 0 4rem 2rem 0;
+    background-color: transparent;
+    box-shadow: none;
+    float: right;
+    text-align: right; }
+    .slogan__line {
+      display: inline-block;
+      font-size: 3rem; }
+    .slogan__sections {
+      position: relative; }
+    .slogan__toggleSections {
+      display: inline-block;
+      position: absolute;
+      top: 12rem;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      width: 20rem;
+      padding: 2rem;
+      background-color: rgba(132, 183, 78, 0.9); } }
+
+@media screen and (max-width: 750px) {
+  .slogan {
+    padding: 0 4rem 0 0; }
+    .slogan__toggleSections {
+      top: 5rem;
+      padding: 1rem; } }
+
+@media screen and (max-width: 520px) {
+  .slogan__line {
+    font-size: 2rem; } }
+
+/* csiangleur
+ *
+ * /sass/components/_card.scss - Esthetic style for card
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.card {
+  padding: 0 4rem 4rem 4rem;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+  .card__home {
+    position: relative;
+    width: 31.818181818%;
+    min-width: 31rem;
+    margin: 7rem 0 4rem 2rem;
+    float: left; }
+    .card__home:first-of-type {
+      margin-left: 0; }
+  .card__fiches {
+    position: relative;
+    width: 31.818181818%;
+    margin: 4rem 2.272727273% 0 0;
+    padding-top: 4rem;
+    float: left;
+    font-size: 2rem;
+    text-align: center; }
+    .card__fiches:first-of-type {
+      margin-left: 0; }
+    .card__fiches:nth-child(3n) {
+      margin-right: 0; }
+    .card__fiches:last-of-type {
+      margin-right: 0; }
+  .card__links {
+    position: relative;
+    width: 70.8333%;
+    margin: 4rem auto 0;
+    padding-top: 4rem;
+    font-size: 1.8rem;
+    line-height: 1.7; }
+  .card__title {
+    font-size: 0;
+    text-align: center; }
+    .card__title::before {
+      position: relative;
+      top: -3.25rem;
+      display: inline-block;
+      min-width: 6.5rem;
+      padding: 0.3em;
+      font-size: 4rem;
+      font-family: "Glyphs";
+      text-align: center;
+      background-color: #84b74e;
+      border-radius: 50%; }
+    .card__title--newsletter::before {
+      content: ""; }
+    .card__title--schedule::before {
+      content: ""; }
+    .card__title--contact::before {
+      content: ""; }
+  .card__text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    text-align: center; }
+
+.idCard {
+  position: relative;
+  width: 27.777777778%;
+  min-width: 30.5rem;
+  margin: 14rem 2.173913043% 0 2.173913043%;
+  padding: 14rem 4rem 4rem 4rem;
+  float: left; }
+  .idCard__picWrap {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    right: 0;
+    text-align: center; }
+  .idCard__picture {
+    width: 15rem;
+    height: 20rem;
+    overflow: hidden; }
+    .idCard__picture img {
+      width: 15rem; }
+  .idCard__title {
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    font-weight: bold; }
+  .idCard__function {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 1.7; }
+
+@media screen and (max-width: 1150px) {
+  .idCard {
+    width: 45.652173913%; } }
+
+@media screen and (max-width: 1070px) {
+  .card__home {
+    width: 50%;
+    margin: 8rem auto 8rem;
+    float: none; }
+    .card__home:first-of-type {
+      margin: 8rem auto 0; }
+  .card__fiches {
+    width: 48.863636364%; }
+    .card__fiches:nth-child(2n) {
+      margin-right: 0; }
+    .card__fiches:nth-child(3n) {
+      margin-right: 2.272727273%; } }
+
+@media screen and (max-width: 720px) {
+  .idCard {
+    width: 80%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media screen and (max-width: 700px) {
+  .card__fiches {
+    width: 100%; }
+  .card__links {
+    width: 91.666666667%; } }
+
+@media screen and (max-width: 380px) {
+  .card__home {
+    min-width: 29rem; } }
+
+/* csiangleur
+ *
+ * /sass/components/_fiches.scss - Esthetic style for fiches
+ *
+ * coded by Mucht!
+ * Started at 29/11/2016
+ */
+.fiches__list {
+  margin-bottom: 4rem; }
+
+/* csiangleur
+ *
+ * /sass/components/_titles.scss - Esthetic style for titles
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.title {
+  font-family: "Philosopher", sans-serif; }
+  .title__page {
+    font-size: 4rem;
+    margin: 4rem 0 0 4.166666667%; }
+  .title__section {
+    font-size: 3rem;
+    margin-bottom: 1em; }
+
+/* csiangleur
+ *
+ * /sass/components/_schedule.scss - Esthetic style for schedule
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.schedule {
+  width: 100%;
+  min-width: 23rem;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  line-height: 1.7; }
+  .schedule__col--days {
+    text-align: left;
+    float: left; }
+  .schedule__col--times {
+    text-align: right; }
+
+@media screen and (max-width: 38rem) {
+  .schedule {
+    min-width: 21rem;
+    font-size: 1.6rem; } }
+
+/* csiangleur
+ *
+ * /sass/components/_button.scss - Esthetic style for button
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.25em 1em;
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.7;
+  border-radius: 10rem;
+  color: #000;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+  background-color: #84b74e;
+  transition: 0.1s ease-in-out; }
+  .button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #fff; }
+  .button__container {
+    position: absolute;
+    bottom: -2.25em;
+    left: 0;
+    right: 0;
+    text-align: center; }
+    .button__container--fiches {
+      bottom: -1.2em; }
+    .button__container--singleFiche {
+      position: inherit; }
+
+/* csiangleur
+ *
+ * /sass/components/_address.scss - Esthetic style for address
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.addressLine {
+  position: relative;
+  margin: 0;
+  padding-left: 2em;
+  font-size: 1.8rem;
+  line-height: 1.7; }
+  .addressLine::before {
+    font-family: "Glyphs";
+    position: absolute;
+    left: 0; }
+  .addressLine--location::before {
+    content: ""; }
+  .addressLine--phone::before {
+    content: ""; }
+  .addressLine--email::before {
+    content: ""; }
+
+@media screen and (max-width: 380px) {
+  .addressLine {
+    font-size: 1.6rem; } }
+
+/* csiangleur
+ *
+ * /sass/components/_sections.scss - Esthetic style for sections
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.mainSection {
+  position: relative;
+  margin: 4rem 0 0;
+  padding-bottom: 4rem; }
+  .mainSection:first-of-type {
+    margin-top: 4rem; }
+  .mainSection:last-of-type {
+    margin-bottom: 6rem; }
+  .mainSection--lastClear {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .mainSection__title {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 4.166666667%;
+    padding: 0.25em 1em 0.25em 4.166666667%;
+    line-height: 1.7;
+    background-color: #84b74e;
+    border-top-right-radius: 3rem; }
+  .mainSection__content {
+    position: relative;
+    padding: 0.1rem 0 4rem;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+    .mainSection__content--idCard {
+      padding: 0.1rem 2.083333333% 4rem; }
+  .mainSection__subTitle {
+    display: block;
+    width: 70.833333333%;
+    margin: 4rem auto;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.7; }
+    .mainSection__subTitle--fiches {
+      padding-bottom: 6rem; }
+  .mainSection__textBlock {
+    width: 70.833333333%;
+    margin: 4rem auto;
+    padding: 4rem; }
+  .mainSection__legend {
+    width: 70.833333333%;
+    margin: 4rem auto 0rem; }
+  .mainSection__checkbox {
+    display: none; }
+    .mainSection__checkbox:checked + .mainSection {
+      margin-top: 6rem;
+      padding: 0;
+      box-shadow: none; }
+    .mainSection__checkbox:checked + .mainSection .mainSection__label .mainSection__title {
+      position: inherit;
+      top: inherit;
+      left: inherit;
+      border-bottom-right-radius: 3rem; }
+    .mainSection__checkbox:checked + .mainSection .mainSection__content {
+      display: none; }
+  .mainSection__label {
+    cursor: pointer; }
+  .mainSection__cols {
+    float: left;
+    margin-left: 2.083333333%;
+    margin-top: 4rem; }
+    .mainSection__cols--info {
+      width: 39.583333333%;
+      margin-left: 4.166666667%; }
+    .mainSection__cols--maps {
+      width: 50%; }
+  .mainSection__contact {
+    margin-bottom: 4rem; }
+    .mainSection__contact--schedule {
+      max-width: 32.5rem;
+      min-width: 22.5rem;
+      margin-bottom: 0; }
+  .mainSection__maps--img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    border: 0.1rem solid #84b74e;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+  .mainSection__maps--gmap {
+    width: 100%;
+    height: 20.5rem;
+    border: 0.1rem solid #84b74e;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+
+.box {
+  border: 0.1rem solid #84b74e;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08); }
+
+@media screen and (max-width: 700px) {
+  .mainSection__subTitle {
+    width: 91.666666667%; }
+  .mainSection__textBlock {
+    width: 91.666666667%; }
+  .mainSection__legend {
+    width: 91.666666667%; }
+  .mainSection__contact {
+    width: 50%;
+    margin: 0 auto 4rem; }
+  .mainSection__cols {
+    margin: 4rem 4.166666667% 0;
+    float: none; }
+    .mainSection__cols--info {
+      width: 91.666666667%; }
+    .mainSection__cols--maps {
+      width: 91.666666667%; } }
+
+@media screen and (max-width: 600px) {
+  .mainSection__contact {
+    width: 60%; } }
+
+@media screen and (max-width: 500px) {
+  .mainSection__contact {
+    width: 75%; } }
+
+@media screen and (max-width: 400px) {
+  .mainSection__contact {
+    width: 90%; } }
+
+@media screen and (max-width: 350px) {
+  .mainSection__contact {
+    width: 100%; } }
+
+/* csiangleur
+ *
+ * /sass/components/_form.scss - Esthetic style for form
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.form {
+  padding: 4rem 4.166666667% 4rem; }
+  .form__group {
+    position: relative;
+    margin-bottom: 2rem; }
+    .form__group:last-child {
+      margin-bottom: 0; }
+  .form__label {
+    position: relative;
+    display: inline-block;
+    width: 20.454545455%;
+    margin-right: 2.272727273%;
+    text-align: right;
+    font-size: 2rem; }
+    .form__label--msg {
+      position: absolute;
+      top: 0.5em; }
+  .form__input {
+    display: inline-block;
+    width: 65.909090909%;
+    padding: 0.5em 1em;
+    font-size: 1.8rem;
+    font-family: "Open Sans", sans-serif;
+    border: 0.1rem solid #84b74e; }
+    .form__input--textarea {
+      margin-left: 22.727272727%;
+      resize: vertical; }
+    .form__input:focus {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); }
+  .form__submit {
+    margin-left: 22.727272727%;
+    background-color: #84b74e;
+    border: 0.1rem solid #84b74e;
+    cursor: pointer; }
+    .form__submit:hover {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      border-color: #fff; }
+
+.wrapFormFeedback {
+  display: inline-block;
+  width: 65.909090909%;
+  margin-left: 22.727272727%;
+  text-align: right;
+  font-size: 1.6rem; }
+
+.formFeedback--summary {
+  text-align: center;
+  color: red; }
+
+.formFeedback--fail {
+  color: red; }
+
+.formFeedback--success {
+  text-align: center;
+  color: #84b74e; }
+
+@media screen and (max-width: 900px) {
+  .wrapFormFeedback {
+    text-align: left; } }
+
+@media screen and (max-width: 500px) {
+  .form__label {
+    width: 100%;
+    padding-bottom: 0.25em;
+    text-align: left; }
+    .form__label--msg {
+      display: block;
+      padding-bottom: 0.25em;
+      position: inherit; }
+  .form__input {
+    width: 100%; }
+    .form__input--textarea {
+      margin-left: 0;
+      margin-top: 0.5em; }
+  .form__submit {
+    margin-left: 0; }
+  .wrapFormFeedback {
+    width: 100%;
+    margin-left: 0; } }
+
+/* csiangleur
+ *
+ * /sass/components/_singleFiche.scss - Esthetic style for singleFiche
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+.singleFiche__subTitle {
+  margin-left: 35.416666667%;
+  font-size: 3rem; }
+
+.singleFiche__definition {
+  width: 91.666666667%; }
+
+.singleFiche__article {
+  width: 100%;
+  margin: 4rem 0 2rem; }
+
+.singleFiche__illustration {
+  width: 29.166666667%;
+  margin: 4rem 2.083333333% 0 4.166666667%;
+  border: 0.1rem solid #84b74e;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  float: left; }
+
+.singleFiche__content {
+  width: 60.416666667%;
+  float: left; }
+
+.singleFiche__back {
+  margin-left: 4.166666667%;
+  float: left; }
+
+.singleFiche__more {
+  margin-right: 4.166666667%;
+  float: right; }
+
+@media screen and (max-width: 400px) {
+  .singleFiche__subTitle {
+    margin-left: 4.166666667%; }
+  .singleFiche__illustration {
+    width: 91.666666667%;
+    float: none; }
+  .singleFiche__content {
+    width: 91.666666667%;
+    float: none; }
+  .singleFiche__back, .singleFiche__more {
+    margin: 0 0 2rem 0;
+    float: none; } }

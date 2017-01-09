@@ -1,0 +1,181 @@
+/* csiangleur
+ *
+ * /sass/components/_sections.scss - Esthetic style for sections
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.mainSection{
+    position: relative;
+    margin: 4rem 0 0;
+    padding-bottom: 4rem;
+    &:first-of-type{
+        margin-top: 4rem;
+    }
+    &:last-of-type{
+        margin-bottom: 6rem;
+    }
+    &--lastClear{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &__title{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 4.166666667%;
+        padding: 0.25em 1em 0.25em 4.166666667%;
+        line-height: 1.7;
+        background-color: $titleBcg;
+        border-top-right-radius: 3rem;
+    }
+    &__content{
+        position: relative;
+        padding: 0.1rem 0 4rem;
+        box-shadow: $mainShadow;
+        &--idCard{
+            padding: 0.1rem 2.083333333% 4rem;
+        }
+    }
+    &__subTitle{
+        display: block;
+        width: 70.833333333%;
+        margin: 4rem auto;
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.7;
+        &--fiches{
+            padding-bottom: 6rem;
+        }
+    }
+    &__textBlock{
+        width: 70.833333333%;
+        margin: 4rem auto;
+        padding: 4rem;
+    }
+    &__legend{
+        width: 70.833333333%;
+        margin: 4rem auto 0rem;
+    }
+    &__checkbox{
+        display: none;
+        &:checked + .mainSection{
+            margin-top: 6rem;
+            padding: 0;
+            box-shadow: none;
+        }
+        &:checked + .mainSection .mainSection__label .mainSection__title{
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            border-bottom-right-radius: 3rem;
+        }
+        &:checked + .mainSection .mainSection__content{
+            display: none;
+        }
+    }
+    &__label{
+        cursor: pointer;
+    }
+    &__cols{
+        float: left;
+        margin-left: 2.083333333%;
+        margin-top: 4rem;
+        &--info{
+            width: 39.583333333%;
+            margin-left: 4.166666667%;
+        }
+        &--maps{
+            width: 50%;
+        }
+    }
+    &__contact{
+        margin-bottom: 4rem;
+        &--schedule{
+            max-width: 32.5rem;
+            min-width: 22.5rem;
+            margin-bottom: 0;
+        }
+    }
+    &__maps{
+        &--img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border: 0.1rem solid $borderColor;
+            box-shadow: $mainShadow;
+        }
+        &--gmap{
+            width: 100%;
+            height: 20.5rem;
+            border: 0.1rem solid $borderColor;
+            box-shadow: $mainShadow;
+        }
+    }
+}
+
+.box{
+    border: 0.1rem solid $borderColor;
+    box-shadow: $mainShadow;
+}
+
+// ===== media query =====
+@media screen and (max-width: 700px) {
+    .mainSection{
+        &__subTitle{
+            width: 91.666666667%;
+        }
+        &__textBlock{
+            width: 91.666666667%;
+        }
+        &__legend{
+            width: 91.666666667%;
+        }
+        &__contact{
+            width: 50%;
+            margin: 0 auto 4rem;
+        }
+        &__cols{
+            margin: 4rem 4.166666667% 0;
+            float: none;
+            &--info{
+                width: 91.666666667%;
+            }
+            &--maps{
+                width: 91.666666667%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainSection{
+        &__contact{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainSection{
+        &__contact{
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainSection{
+        &__contact{
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .mainSection{
+        &__contact{
+            width: 100%;
+        }
+    }
+}

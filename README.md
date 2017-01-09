@@ -39,15 +39,15 @@ Le projet consiste à faire un site pour l'Maison Médicale d’Angleur – Cent
     - ...
 
 
-**Page "Fonctionnement" :**
+**Page "Comment ça marche" :**
 
 - Inscription
 - Désinscription
 - Service de garde
-    - Fonctionnement
-    - Remboursement
+- Fonctionnement
+- Remboursement
 
-**Page "Activités du centre"" :**
+**Page "Fiches info"" :**
 
 - Fiches pratiques thématiques
     - Vaccinations pour les enfants

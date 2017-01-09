@@ -1,0 +1,33 @@
+/* => Nom du site
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by Mucht
+ */
+
+ // Grid
+ // html{
+ //     background-image: url(../images/grid.png);
+ //     background-repeat: repeat-y;
+ //     background-position: center;
+ //     background-size: contain;
+ // }
+ // body{
+ //     opacity: 0.5;
+ // }
+
+// Other
+.hidden {
+    position: absolute;
+    color: transparent;
+}
+
+.clear{
+    clear: both;
+}
+
+.clear::after{
+    content: " ";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,54 @@
+ /* csiangleur
+  *
+  * /sass/base/_root.scss - Base styles for root element
+  *
+  * coded by Mucht
+  * Started at 28/11/2016
+  */
+
+html{
+    font-family: $openSansStack;
+    font-size: 10px;
+}
+
+body{
+    margin-bottom: 36rem;
+}
+
+.content{
+    position: relative;
+    background-color: $pageBcg;
+    box-shadow: $mainShadow;
+}
+
+.wrap{
+    padding: 0 4.166666667%;
+    &__fiches{
+        position: relative;
+        margin-bottom: 6rem;
+    }
+    &__idCard{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+p{
+    font-size: 2rem;
+    line-height: 1.7;
+    margin-bottom: 1em;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+strong{
+    font-weight: bold;
+}
+
+// ===== media query =====
+@media screen and (max-width: 650px) {
+    body{
+        margin-bottom: 0;
+    }
+}

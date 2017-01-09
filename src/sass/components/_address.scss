@@ -1,0 +1,36 @@
+/* csiangleur
+ *
+ * /sass/components/_address.scss - Esthetic style for address
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.addressLine{
+    position: relative;
+    margin: 0;
+    padding-left: 2em;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    &::before{
+        font-family: $icon;
+        position: absolute;
+        left: 0;
+    }
+    &--location::before{
+        content: "";
+    }
+    &--phone::before{
+        content: "";
+    }
+    &--email::before{
+        content: "";
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 380px) {
+    .addressLine{
+        font-size: 1.6rem;
+    }
+}

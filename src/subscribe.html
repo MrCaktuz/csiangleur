@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width,initial-scale1">
+        <meta name="author" content="Mucht - Mathieu Claessens">
+        <meta name="description" content="Site officiel du centre de santé intégré de Angleur">
+        <meta name="keywords" content="maison médicale angleur soins qualité">
+
+        <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title">
+        <title>Inscription à la newsletter - CSIAngleur</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="clear">
+                <a href="./index.html">
+                    <img class="header__logo" src="./images/CSI-logoNoText.png" alt="Lien vers l'accueil" width="210" height="210"/>
+                </a>
+                <p class="header__title">Centre de Santé Intégré d'Angleur</p>
+            </div>
+            <div class="mainNav" role="navigation">
+                <input class="mainNav__input" type="checkbox" id="toggle-nav">
+                <label class="mainNav__label link" for="toggle-nav">Menu</label>
+                <ol class="mainNav__list">
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./index.html">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./quiSommesNous.html">
+                            Qui sommes-nous
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./commentCaMarche.html">
+                            Comment ça marche
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./fiches.html">
+                            Fiches info
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./links.html">
+                            Liens utiles
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="slogan">
+                <p class="slogan__lineOne">Des soins de</p>
+                <p class="slogan__lineTwo">qualité</p>
+                <p class="slogan__lineThree">pour tous</p>
+            </div>
+        </header>
+        <div class="content clear">
+            <div class="hiddenFooter">
+                <h1 class="title title__page">Inscription à la newsletter</h1>
+                <div class="wrap wrap__fiches">
+                    <div class="mainSection__legend">
+                        <p>
+                            Remplissez ce formulaire pour vous inscrire à notre newsletter et recevoir nos informations directement sur votre e-mail.
+                        </p>
+                    </div>
+                    <form class="form" action="index.html" method="post">
+                        <fieldset class="form__group">
+                            <label class="form__label" for="name">Nom</label><input class="form__input" type="text" name="name" id="name" placeholder="Votre nom ici">
+                        </fieldset>
+                        <fieldset class="form__group">
+                            <label class="form__label" for="mail">E-mail</label><input class="form__input" type="email" name="mail" id="mail" placeholder="Votre adresse mail ici">
+                        </fieldset>
+                        <fieldset class="form__group">
+                            <input class="form__submit form__input" type="submit" value="M'inscrire">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="clear">
+                <section class="footerSection">
+                    <h2 class="title title__section">
+                        Menu
+                    </h2>
+                    <ol class="footerSection__list">
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./index.html">
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./quiSommesNous.html">
+                                Qui sommes-nous
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./commentCaMarche.html">
+                                Comment ça marche
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="fiches.html">
+                                Fiches info
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="links.html">
+                                Liens utiles
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+                <section class="footerSection">
+                    <h2 class="title title__section">Coordonnées</h2>
+                    <div itemscope itemtype="https://schema.org/Organization">
+                        <div itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+                            <p class="addressLine addressLine--location"><span itemprop="postOfficeBoxNumber">48</span>, <span itemprop="streetAddress">rue vaudrée</span></p>
+                            <p class="addressLine"><span itemprop="postalCode">4000</span> <span itemprop="addressLocality">Liège</span></p>
+                        </div>
+                        <p class="addressLine addressLine--phone" itemprop="telephone">02 880 65 67</p>
+                        <a class="addressLine addressLine--email link" href="#" itemprop="email">contact@csiangleur.be</a>
+                    </div>
+                </section>
+                <section class="footerSection">
+                    <h2 class="title title__section">
+                        Liens utiles
+                    </h2>
+                    <ol class="footerSection__list">
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./contact.html#contact">
+                                Nous contacter
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./subscribe.html">
+                                Nous suivre
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+            <small class="footerSection__copyrights">&copy; csi angleur 2017 - site réalisé par <a class="footerSection__copyrights--link link" href="http://mathieuclaessens.be">Mathieu Claessens</a></small>
+        </footer>
+    </body>
+</html>

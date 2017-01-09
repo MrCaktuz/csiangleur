@@ -1,0 +1,31 @@
+/* csiangleur
+ *
+ * /sass/settings/_colors.scss - Global colors variables
+ *
+ * coded by Mucht
+ * Started at 28/11/2016
+ */
+
+// Shadow
+$mainShadow: 0px 2px 10px 0px rgba(0,0,0,0.08);
+$hoverShadow: 0px 0px 10px 0px rgba(0,0,0,0.20);
+$focusShadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+
+// main color
+$white: #fff;
+$black: #000;
+$mainColor: rgba( 132, 183, 78, 1 );
+$mainColorTransparent: rgba( 132, 183, 78, 0.9 );
+$coverColor: rgba( 255, 255, 255, 0.8 );
+$borderColor: $mainColor;
+$borderColorNavIcon: $black;
+$formFailColor: red;
+$formSuccessColor: $mainColor;
+
+// Background color
+$footerBcg: $mainColor;
+$pageBcg: $white;
+$sloganBcg: $mainColorTransparent;
+$titleBcg: $mainColor;
+$buttonBcg: $mainColor;
+$submitBcg: $mainColor;

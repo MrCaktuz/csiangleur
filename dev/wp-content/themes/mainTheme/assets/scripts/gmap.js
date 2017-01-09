@@ -1,0 +1,1 @@
+!function(){"use strict";var o,n,e,a;a=function(){n=new google.maps.Map(o[0],{center:new google.maps.LatLng(50.612932,5.597396),disableDefaultUI:!0,scrollwheel:!1,zoomControl:!0,zoom:13}),e=new google.maps.Marker({position:{lat:50.612932,lng:5.597396},map:n,animation:google.maps.Animation.DROP,title:"CSI Angleur"})},$(function(){o=$("#gmap"),a()})}();

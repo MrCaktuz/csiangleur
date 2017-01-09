@@ -1,0 +1,73 @@
+/* csiangleur
+ *
+ * /sass/objects/_header.scss - Non-Esthetic style for header
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.header{
+    padding-top: 4rem;
+    background-color: $pageBcg;
+    &__logo{
+        width: 15rem;
+        height: auto;
+        margin: 0 3.125% 0 4.166666667%;
+        float: left;
+    }
+    &__title{
+        width: 39.583333333%;
+        margin: 3.5rem 0 0 2.083333333%;
+        font-family: $philosopherStack;
+        font-size: 4rem;
+        line-height: 1.2;
+        float: left;
+        z-index: 2;
+    }
+    &__photo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 810px) {
+    .header{
+        background: linear-gradient(100deg, rgba(255,255,255,0.9) 0%,rgba(131,181,77,0.9) 100%), url( '../images/house.jpg' ) center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &__title{
+            width: 60%;
+        }
+        &__photo{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header{
+        padding: 13.5rem 0 6rem;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .header{
+        &__title{
+            width: 59%;
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 487px) {
+    .header{
+        &__title{
+            margin-top: 0;
+        }
+        &__logo{
+            width: 10rem;
+        }
+    }
+}

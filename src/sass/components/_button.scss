@@ -1,0 +1,40 @@
+/* csiangleur
+ *
+ * /sass/components/_button.scss - Esthetic style for button
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.button{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.25em 1em;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.7;
+    border-radius: 10rem;
+    color: $black;
+    box-shadow: $mainShadow;
+    border: 1px solid transparent;
+    background-color: $buttonBcg;
+    transition: 0.1s ease-in-out;
+    &:hover{
+        box-shadow: $hoverShadow;
+        border: 1px solid $white;
+    }
+    &__container{
+        position: absolute;
+        bottom: -2.25em;
+        left: 0;
+        right: 0;
+        text-align: center;
+        &--fiches{
+            bottom: -1.2em;
+        }
+        &--singleFiche{
+            position: inherit;
+        }
+    }
+}

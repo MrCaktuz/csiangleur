@@ -1,0 +1,114 @@
+/* csiangleur
+ *
+ * /sass/components/_form.scss - Esthetic style for form
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.form{
+    padding: 4rem 4.166666667% 4rem;
+    &__group{
+        position: relative;
+        margin-bottom: 2rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__label{
+        position: relative;
+        display: inline-block;
+        width: 20.454545455%;
+        margin-right: 2.272727273%;
+        text-align: right;
+        font-size: 2rem;
+        &--msg{
+            position: absolute;
+            top: 0.5em;
+        }
+    }
+    &__input{
+        display: inline-block;
+        width: 65.909090909%;
+        padding: 0.5em 1em;
+        font-size: 1.8rem;
+        font-family: $openSansStack;
+        border: 0.1rem solid $borderColor;
+        &--textarea{
+            margin-left: 22.727272727%;
+            resize: vertical;
+        }
+        &:focus{
+            box-shadow: $focusShadow;
+        }
+    }
+    &__submit{
+        margin-left: 22.727272727%;
+        background-color: $submitBcg;
+        border: 0.1rem solid $borderColor;
+        cursor: pointer;
+        &:hover{
+            box-shadow: $hoverShadow;
+            border-color: $white;
+        }
+    }
+}
+
+// Form validation style
+.wrapFormFeedback{
+    display: inline-block;
+    width: 65.909090909%;
+    margin-left: 22.727272727%;
+    text-align: right;
+    font-size: 1.6rem;
+}
+.formFeedback{
+    &--summary{
+        text-align: center;
+        color: $formFailColor;
+    }
+    &--fail{
+        color: $formFailColor;
+    }
+    &--success{
+        text-align: center;
+        color: $formSuccessColor;
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 900px) {
+
+    .wrapFormFeedback{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form{
+        &__label{
+            width: 100%;
+            padding-bottom: 0.25em;
+            text-align: left;
+            &--msg{
+                display: block;
+                padding-bottom: 0.25em;
+                position: inherit;
+            }
+        }
+        &__input{
+            width: 100%;
+            &--textarea{
+                margin-left: 0;
+                margin-top: 0.5em;
+            }
+        }
+        &__submit{
+            margin-left: 0;
+        }
+    }
+    .wrapFormFeedback{
+        width: 100%;
+        margin-left: 0;
+    }
+}

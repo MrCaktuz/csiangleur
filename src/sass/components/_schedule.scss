@@ -1,0 +1,30 @@
+/* csiangleur
+ *
+ * /sass/components/_schedule.scss - Esthetic style for schedule
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.schedule{
+    width: 100%;
+    min-width: 23rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    &__col--days{
+        text-align: left;
+        float: left;
+    }
+    &__col--times{
+        text-align: right;
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 38rem) {
+    .schedule{
+        min-width: 21rem;
+        font-size: 1.6rem;
+    }
+}

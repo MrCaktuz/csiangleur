@@ -1,0 +1,61 @@
+/* csiangleur
+ *
+ * /sass/components/_singleFiche.scss - Esthetic style for singleFiche
+ *
+ * coded by Mucht!
+ * Started at 28/11/2016
+ */
+
+.singleFiche{
+    &__subTitle{
+        margin-left: 35.416666667%;
+        font-size: 3rem;
+    }
+    &__definition{
+        width: 91.666666667%;
+    }
+    &__article{
+        width: 100%;
+        margin: 4rem 0 2rem;
+    }
+    &__illustration{
+        width: 29.166666667%;
+        margin: 4rem 2.083333333% 0 4.166666667%;
+        border: 0.1rem solid $borderColor;
+        box-shadow: $mainShadow;
+        float: left;
+    }
+    &__content{
+        width: 60.416666667%;
+        float: left;
+    }
+    &__back{
+        margin-left: 4.166666667%;
+        float: left;
+    }
+    &__more{
+        margin-right: 4.166666667%;
+        float: right;
+    }
+}
+
+// ===== media query =====
+@media screen and (max-width: 400px) {
+    .singleFiche{
+        &__subTitle{
+            margin-left: 4.166666667%;
+        }
+        &__illustration{
+            width: 91.666666667%;
+            float: none;
+        }
+        &__content{
+            width: 91.666666667%;
+            float: none;
+        }
+        &__back, &__more{
+            margin: 0 0 2rem 0;
+            float: none;
+        }
+    }
+}

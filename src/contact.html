@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width,initial-scale1">
+        <meta name="author" content="Mucht - Mathieu Claessens">
+        <meta name="description" content="Site officiel du centre de santé intégré de Angleur">
+        <meta name="keywords" content="maison médicale angleur soins qualité">
+
+        <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title">
+        <title>Contact - CSIAngleur</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="clear">
+                <a href="./index.html">
+                    <img class="header__logo" src="./images/CSI-logoNoText.png" alt="Lien vers l'accueil" width="210" height="210"/>
+                </a>
+                <p class="header__title">Centre de Santé Intégré d'Angleur</p>
+            </div>
+            <div class="slogan">
+                <p class="slogan__line slogan__line--one">Des soins de</p>
+                <p class="slogan__line slogan__line--two">qualité</p>
+                <p class="slogan__line slogan__line--three">pour tous</p>
+            </div>
+            <div class="mainNav clear" role="navigation">
+                <input class="mainNav__input" type="checkbox" id="toggle-nav">
+                <label class="mainNav__label link" for="toggle-nav">Menu</label>
+                <ol class="mainNav__list">
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./index.html">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./quiSommesNous.html">
+                            Qui sommes-nous
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./commentCaMarche.html">
+                            Comment ça marche
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./fiches.html">
+                            Fiches info
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link link--active" href="./contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="mainNav__listElt">
+                        <a class="mainNav__listLink link" href="./links.html">
+                            Liens utiles
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </header>
+        <div class="content">
+            <div class="hiddenFooter">
+                <h1 class="title title__page">Nous contacter</h1>
+                <input class="mainSection__checkbox" type="checkbox" id="toggle-sectionFindUs">
+                <section class="mainSection">
+                    <label class="mainSection__label" for="toggle-sectionFindUs">
+                        <h2 class="title title__section mainSection__title">
+                            Nous trouver
+                        </h2>
+                    </label>
+                    <div class="mainSection__content clear">
+                        <div class="mainSection__cols mainSection__cols--info">
+                            <section class="mainSection__contact mainSection__contact--address">
+                                <h2 class="title title__section">Coordonnées</h2>
+                                <div itemscope itemtype="https://schema.org/Organization">
+                                    <div itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+                                        <p class="addressLine addressLine--location"><span itemprop="postOfficeBoxNumber">48</span>, <span itemprop="streetAddress">rue vaudrée</span></p>
+                                        <p class="addressLine"><span itemprop="postalCode">4000</span> <span itemprop="addressLocality">Liège</span></p>
+                                    </div>
+                                    <p class="addressLine addressLine--phone" itemprop="telephone">02 880 65 67</p>
+                                    <a class="addressLine addressLine--email link" href="#" itemprop="email">contact@csiangleur.be</a>
+                                </div>
+                            </section>
+                            <section class="mainSection__contact mainSection__contact--schedule">
+                                <h2 class="title title__section">Horaire</h2>
+                                <div class="schedule">
+                                    <ol class="schedule__col schedule__col--days">
+                                        <li class="schedule__days">Lundi</li>
+                                        <li class="schedule__days">Mardi</li>
+                                        <li class="schedule__days">Mercredi</li>
+                                        <li class="schedule__days">Jeudi</li>
+                                        <li class="schedule__days">Vendredi</li>
+                                        <li class="schedule__days">Samedi</li>
+                                        <li class="schedule__days">Dimanche</li>
+                                    </ol>
+                                    <ol class="schedule__col schedule__col--times">
+                                        <li class="schedule__times">09h00 - 18h00</li>
+                                        <li class="schedule__times">09h00 - 18h00</li>
+                                        <li class="schedule__times">09h00 - 18h00</li>
+                                        <li class="schedule__times">09h00 - 18h00</li>
+                                        <li class="schedule__times">09h00 - 18h00</li>
+                                        <li class="schedule__times">Fermé</li>
+                                        <li class="schedule__times">Fermé</li>
+                                    </ol>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="mainSection__cols mainSection__cols--maps">
+                            <section class="mainSection__maps">
+                                <h2 class="title title__section">Nous rendre visite</h2>
+                                <img class="mainSection__maps--img" src="./images/house.jpg" alt="Photo de la maison médicale" width="1280" height="544"/>
+                                <div class="mainSection__maps--gmap" id="gmap"></div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <input class="mainSection__checkbox" type="checkbox" id="toggle-sectionTeam">
+                <section class="mainSection" id="team">
+                    <label class="mainSection__label" for="toggle-sectionTeam">
+                        <h2 class="mainSection__title title title__section">
+                            Notre équipe
+                        </h2>
+                    </label>
+                    <div class="mainSection__content mainSection__content--idCard clear">
+                        <section class="idCard box">
+                            <div class="idCard__picWrap">
+                                <img class="idCard__picture box" src="./images/ironman.jpg" alt="" />
+                            </div>
+                            <div class="wrap__idCard">
+                                <h3 class="idCard__title">
+                                    Anne-Laure Giraudet
+                                    <span class="idCard__function">
+                                        Infirmière
+                                    </span>
+                                </h3>
+                                <section class="idCard__shedule">
+                                    <h2 class="idCard__title">Horaire</h2>
+                                    <div class="schedule">
+                                        <ol class="schedule__col schedule__col--days">
+                                            <li class="schedule__days">Lundi</li>
+                                            <li class="schedule__days">Mardi</li>
+                                            <li class="schedule__days">Mercredi</li>
+                                            <li class="schedule__days">Jeudi</li>
+                                            <li class="schedule__days">Vendredi</li>
+                                            <li class="schedule__days">Samedi</li>
+                                            <li class="schedule__days">Dimanche</li>
+                                        </ol>
+                                        <ol class="schedule__col schedule__col--times">
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">Fermé</li>
+                                            <li class="schedule__times">Fermé</li>
+                                        </ol>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                        <section class="idCard box">
+                            <div class="idCard__picWrap">
+                                <img class="idCard__picture box" src="./images/batman.jpg" alt="" />
+                            </div>
+                            <div class="wrap__idCard">
+                                <h3 class="idCard__title">
+                                    Véronique Bernardi
+                                    <span class="idCard__function">
+                                        Administration
+                                    </span>
+                                </h3>
+                                <section class="idCard__shedule">
+                                    <h2 class="idCard__title">Horaire</h2>
+                                    <div class="schedule">
+                                        <ol class="schedule__col schedule__col--days">
+                                            <li class="schedule__days">Lundi</li>
+                                            <li class="schedule__days">Mardi</li>
+                                            <li class="schedule__days">Mercredi</li>
+                                            <li class="schedule__days">Jeudi</li>
+                                            <li class="schedule__days">Vendredi</li>
+                                            <li class="schedule__days">Samedi</li>
+                                            <li class="schedule__days">Dimanche</li>
+                                        </ol>
+                                        <ol class="schedule__col schedule__col--times">
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">Fermé</li>
+                                            <li class="schedule__times">Fermé</li>
+                                        </ol>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                        <section class="idCard box">
+                            <div class="idCard__picWrap">
+                                <img class="idCard__picture box" src="./images/storm.jpg" alt="" />
+                            </div>
+                            <div class="wrap__idCard">
+                                <h3 class="idCard__title">
+                                    Jean-Paul Devonat
+                                    <span class="idCard__function">
+                                        Médecin généraliste
+                                    </span>
+                                </h3>
+                                <section class="idCard__shedule">
+                                    <h2 class="idCard__title">Horaire</h2>
+                                    <div class="schedule">
+                                        <ol class="schedule__col schedule__col--days">
+                                            <li class="schedule__days">Lundi</li>
+                                            <li class="schedule__days">Mardi</li>
+                                            <li class="schedule__days">Mercredi</li>
+                                            <li class="schedule__days">Jeudi</li>
+                                            <li class="schedule__days">Vendredi</li>
+                                            <li class="schedule__days">Samedi</li>
+                                            <li class="schedule__days">Dimanche</li>
+                                        </ol>
+                                        <ol class="schedule__col schedule__col--times">
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">09h00 - 18h00</li>
+                                            <li class="schedule__times">Fermé</li>
+                                            <li class="schedule__times">Fermé</li>
+                                        </ol>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <input class="mainSection__checkbox" type="checkbox" id="toggle-sectionForm">
+                <section class="mainSection mainSection--lastClear" id="contact">
+                    <label class="mainSection__label" for="toggle-sectionForm">
+                        <h2 class="mainSection__title title title__section">
+                            Nous contacter
+                        </h2>
+                    </label>
+                    <div role="form" class="wpcf7" id="wpcf7-f133-o1" lang="fr-FR" dir="ltr">
+                        <div class="screen-reader-response" role="alert">One or more fields have an error. Please check and try again.
+                            <ul>
+                                <li><a href="#name">The field is required.</a></li>
+                                <li><a href="#mail">The field is required.</a></li>
+                                <li><a href="#msg">The field is required.</a></li>
+                            </ul>
+                        </div>
+                        <form action="/dev/?page_id=20#wpcf7-f133-o1" method="post" class="wpcf7-form invalid form mainSection__content" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="133" />
+                                <input type="hidden" name="_wpcf7_version" value="4.6" />
+                                <input type="hidden" name="_wpcf7_locale" value="fr_FR" />
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f133-o1" />
+                                <input type="hidden" name="_wpnonce" value="5e560b7246" />
+                            </div>
+                            <fieldset class="form__group">
+                                <label class="form__label" for="name">Nom</label><span class="wpcf7-form-control-wrap name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid form__input" id="name" aria-required="true" aria-invalid="true" placeholder="Votre nom ici" /><span role="alert" class="wpcf7-not-valid-tip">The field is required.</span></span><br />
+                            </fieldset>
+                            <fieldset class="form__group">
+                                <label class="form__label" for="mail">E-mail</label><span class="wpcf7-form-control-wrap mail"><input type="email" name="mail" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email wpcf7-not-valid form__input" id="mail" aria-required="true" aria-invalid="true" placeholder="Votre adresse mail ici" /><span role="alert" class="wpcf7-not-valid-tip">The field is required.</span></span><br />
+                            </fieldset>
+                            <fieldset class="form__group">
+                                <label class="form__label form__label--msg" for="msg">Message</label><span class="wpcf7-form-control-wrap msg"><textarea name="msg" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required wpcf7-not-valid form__input form__input--textarea" id="msg" aria-required="true" aria-invalid="true" placeholder="Votre message ici"></textarea><span role="alert" class="wpcf7-not-valid-tip">The field is required.</span></span><br />
+                            </fieldset>
+                            <fieldset class="form__group">
+                                <input type="submit" value="Envoyer" class="wpcf7-form-control wpcf7-submit form__submit form__input" /><br />
+                            </fieldset>
+                            <div class="wpcf7-response-output wpcf7-validation-errors" role="alert">
+                                <p>One or more fields have an error. Please check and try again.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="clear">
+                <section class="footerSection">
+                    <h2 class="title title__section">
+                        Menu
+                    </h2>
+                    <ol class="footerSection__list">
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./index.html">
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./quiSommesNous.html">
+                                Qui sommes-nous
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./commentCaMarche.html">
+                                Comment ça marche
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="fiches.html">
+                                Fiches info
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="links.html">
+                                Liens utiles
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+                <section class="footerSection">
+                    <h2 class="title title__section">Coordonnées</h2>
+                    <div itemscope itemtype="https://schema.org/Organization">
+                        <div itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+                            <p class="addressLine addressLine--location"><span itemprop="postOfficeBoxNumber">48</span>, <span itemprop="streetAddress">rue vaudrée</span></p>
+                            <p class="addressLine"><span itemprop="postalCode">4000</span> <span itemprop="addressLocality">Liège</span></p>
+                        </div>
+                        <p class="addressLine addressLine--phone" itemprop="telephone">02 880 65 67</p>
+                        <a class="addressLine addressLine--email link" href="#" itemprop="email">contact@csiangleur.be</a>
+                    </div>
+                </section>
+                <section class="footerSection">
+                    <h2 class="title title__section">
+                        Liens utiles
+                    </h2>
+                    <ol class="footerSection__list">
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./contact.html#contact">
+                                Nous contacter
+                            </a>
+                        </li>
+                        <li class="footerSection__listElt">
+                            <a class="link" href="./subscribe.html">
+                                Nous suivre
+                            </a>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+            <small class="footerSection__copyrights">&copy; csi angleur 2017 - site réalisé par <a class="footerSection__copyrights--link link" href="http://mathieuclaessens.be">Mathieu Claessens</a></small>
+        </footer>
+
+        <!-- gMap key => AIzaSyBUjvsQNMd_bcP-ME-xWqckXQISl4ogzSc -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUjvsQNMd_bcP-ME-xWqckXQISl4ogzSc"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/gmap.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </body>
+</html>

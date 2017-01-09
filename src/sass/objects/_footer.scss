@@ -1,0 +1,75 @@
+/* csiangleur
+ *
+ * /sass/objects/_footer.scss - Non Esthetic style for footer
+ *
+ * coded by Mucht!
+*/
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 4rem 4.166666667% 2rem;
+    background-color: $footerBcg;
+    z-index: -1;
+}
+
+.footerSection{
+    width: 31.818181818%;
+    margin-left: 2.272727273%;
+    float: left;
+    &:first-of-type{
+        margin-left: 0;
+    }
+    &__list{
+
+    }
+    &__listElt{
+        font-size: 1.8rem;
+        line-height: 1.7;
+    }
+    &__copyrights{
+        display: block;
+        margin-top: 4rem;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        text-align: center;
+        &--link:hover{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.hiddenFooter{
+    padding: 0.1rem;
+}
+
+// ===== media query =====
+@media screen and (max-width: 650px) {
+    .footer{
+        position: inherit;
+    }
+    .footerSection{
+        width: 60%;
+        margin: 0 auto 4rem;
+        float: none;
+        &:first-of-type{
+            margin-left: auto;
+        }
+        &__copyrights{
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .footerSection{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footerSection{
+        width: 80%;
+    }
+}

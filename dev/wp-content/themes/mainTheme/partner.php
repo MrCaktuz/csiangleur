@@ -1,9 +1,10 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Partner
 */
 get_header();
 ?>
+
     <header class="header">
         <div class="header__filter">
             <div class="header__titleBloc clear">
@@ -16,20 +17,26 @@ get_header();
                 <label class="mainNav__label" for="toggle-nav"><span>Menu</span></label>
                 <ul class="mainNav__list">
                     <?php foreach ( ep_get_menu_items( 'main-nav' ) as $navItem ): ?>
-                        <li class="mainNav__listElt<?php echo $navItem -> isCurrent ? ' mainNav__listElt--active' : ''; ?>"><a class="mainNav__listLink" href="<?php echo $navItem -> url; ?>"><?php echo $navItem -> label ?></a></li>
+                        <li class="mainNav__listElt<?php echo $navItem -> isCurrent ? ' mainNav__listElt--active' : ''; ?>"><a class="mainNav__listLink" target="_blank" href="<?php echo $navItem -> url; ?>"><?php echo $navItem -> label ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="buttons">
-        <h2 class="buttons__title">Nos antennes</h2>
+        <?php if (have_posts()) : ?>
+            <div class="buttons__intro">
+                <?php while (have_posts()) : the_post(); ?>
+                    <?php echo the_content(); ?>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
         <?php
-            $posts = new WP_QUERY( [ 'post_type' => 'antennes' ] );
+            $posts = new WP_QUERY( [ 'post_type' => 'partners' ] );
             if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
         ?>
-            <div class="buttons__img buttons__img--antenne pageButtonImg">
-                <a class="buttons__link pageButton" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <div class="buttons__img buttons__img--partner pageButtonImg">
+                <a class="buttons__link pageButton" target="_blank" href="<?php the_field( 'url' ); ?>"><?php the_title(); ?></a>
             </div>
         <?php endwhile; endif; ?>
     </section>

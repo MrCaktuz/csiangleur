@@ -4,76 +4,55 @@
 */
 get_header();
 ?>
-        <div class="slogan slogan__home">
-            <p class="slogan__line slogan__line--one">Des soins de</p>
-            <p class="slogan__line slogan__line--two">qualité</p>
-            <p class="slogan__line slogan__line--three">pour tous</p>
+    <header class="header">
+        <div class="header__filter">
+            <div class="header__titleBloc clear">
+                <a class="header__logoLink" href="/espace-p"><img class="header__logo" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="Lien vers l'accueil" /></a>
+                <h1 class="header__title"><?php bloginfo( 'name' ); ?><span class="header__subTitle"><?php bloginfo( 'description' ); ?></span></h1>
+            </div>
+            <nav class="mainNav">
+                <h2 class="mainNav__title hidden">Navigation principale</h2>
+                <input class="mainNav__input" type="checkbox" id="toggle-nav">
+                <label class="mainNav__label" for="toggle-nav"><span>Menu</span></label>
+                <ul class="mainNav__list">
+                    <?php foreach ( ep_get_menu_items( 'main-nav' ) as $navItem ): ?>
+                        <li class="mainNav__listElt<?php echo $navItem -> isCurrent ? ' mainNav__listElt--active' : ''; ?>"><a class="mainNav__listLink" href="<?php echo $navItem -> url; ?>"><?php echo $navItem -> label ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
         </div>
-        <div class="mainNav clear" role="navigation">
-            <input class="mainNav__input" type="checkbox" id="toggle-nav">
-            <label class="mainNav__label link" for="toggle-nav">Menu</label>
-            <ol class="mainNav__list">
-                <?php foreach ( csia_get_menu_items( 'main-nav' ) as $navItem ): ?>
-                    <li class="mainNav__listElt">
-                        <a class="mainNav__listLink link<?php echo $navItem -> isCurrent ? ' link--active' : ''; ?>" href="<?php echo $navItem -> url; ?>">
-                            <?php echo $navItem -> label ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ol>
-        </div>
-        <img class="header__photo" src="<?php echo get_template_directory_uri() . '/assets/img/house.jpg'; ?>" alt="Photo de la maison médicale" width="1280" height="544"/>
     </header>
-    <div class="content wrap clear">
-        <div class="hiddenFooter">
-            <h1 class="title title__page hidden">Centre de santé intégré d'Angleur</h1>
-            <section class="card card__home">
-                <h2 class="card__title card__title--newsletter">Newsletter</h2>
-                <p class="card__text">
-                    <?php the_field( 'newsletterDescription' ); ?>
-                </p>
-                <div class="button__container">
-                    <a class="button" href="<?php the_field( 'newsletterLink' ); ?>">Nous suivre</a>
+    <section class="profils">
+        <h2 class="hidden">Profils</h2>
+        <?php
+            $posts = new WP_QUERY( [ 'post_type' => 'profiles' ] );
+            if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
+        ?>
+            <div class="profils__img profils__img--tds pageButtonImg <?php the_field( 'css_class' ); ?>">
+                <a class="profils__link pageButton" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </div>
+        <?php endwhile; endif; ?>
+    </section>
+    <section class="news">
+        <h2 class="hidden">news</h2>
+        <article class="news__article">
+            <h3 class="news__title">Dernière news</h3>
+            <?php
+                $posts = new WP_QUERY( [ 'posts_per_page' => 1 ] );
+                if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
+            ?>
+                <div class="news__content">
+                    <h4 class="news__subTitle"><?php the_title(); ?></h4>
+                    <?php the_content(); ?>
                 </div>
-            </section>
-            <section class="card__home card--schedule card">
-                <h2 class="card__title card__title--schedule">Horaire</h2>
-                <div class="schedule">
-                    <ol class="schedule__col schedule__col--days">
-                        <li class="schedule__days">Lundi</li>
-                        <li class="schedule__days">Mardi</li>
-                        <li class="schedule__days">Mercredi</li>
-                        <li class="schedule__days">Jeudi</li>
-                        <li class="schedule__days">Vendredi</li>
-                        <li class="schedule__days">Samedi</li>
-                        <li class="schedule__days">Dimanche</li>
-                    </ol>
-                    <ol class="schedule__col schedule__col--times">
-                        <li class="schedule__times"><?php the_field( 'lundi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'mardi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'mercredi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'jeudi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'vendredi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'samedi' ); ?></li>
-                        <li class="schedule__times"><?php the_field( 'dimanche' ); ?></li>
-                    </ol>
-                </div>
-            </section>
-            <section class="card__home card">
-                <h2 class="card__title card__title--contact">Coordonnées</h2>
-                <div itemscope itemtype="https://schema.org/Organization">
-                    <div itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
-                        <p class="addressLine addressLine--location"><span itemprop="postOfficeBoxNumber"><?php the_field( 'door_number' ); ?></span>, <span itemprop="streetAddress"><?php the_field( 'street' ); ?></span></p>
-                        <p class="addressLine"><span itemprop="postalCode"><?php the_field( 'postal_code' ); ?></span> <span itemprop="addressLocality"><?php the_field( 'city' ); ?></span></p>
-                        <p class="addressLine" itemprop="addressCountry"><?php the_field( 'country' ); ?></p>
-                    </div>
-                    <p class="addressLine addressLine--phone" itemprop="telephone">02 880 65 67</p>
-                    <a class="addressLine addressLine--email link" href="#" itemprop="email">contact@csiangleur.be</a>
-                </div>
-                <div class="button__container">
-                    <a class="button" href="./?page_id=20#formSection">Nous contacter</a>
-                </div>
-            </section>
-        </div>
-    </div>
+
+            <?php endwhile; endif; ?>
+        </article>
+        <article class="news__article">
+            <h3 class="news__title">Actu facebook</h3>
+            <div class="news__content"><?php recent_facebook_posts( array( "number" => 2, "likes" => 0, "comments" => 0, "show_page_link" => 0," show_link_previews" => 0 ) ); ?></div>
+        </article>
+        <a class="news__social social" href="https://www.facebook.com/espace.asbl?fref=ts">Suivez-nous sur facebook</a>
+    </section>
+
 <?php get_footer();

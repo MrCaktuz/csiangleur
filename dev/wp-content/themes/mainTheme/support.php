@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Support
 */
 get_header();
 ?>
@@ -22,16 +22,22 @@ get_header();
             </nav>
         </div>
     </header>
-    <section class="buttons">
-        <h2 class="buttons__title">Nos antennes</h2>
-        <?php
-            $posts = new WP_QUERY( [ 'post_type' => 'antennes' ] );
-            if ( $posts -> have_posts() ): while ( $posts -> have_posts() ): $posts -> the_post();
-        ?>
-            <div class="buttons__img buttons__img--antenne pageButtonImg">
-                <a class="buttons__link pageButton" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </div>
-        <?php endwhile; endif; ?>
-    </section>
+    <article class="content support clear">
+        <h2 class="content__title">Abonnement à notre magazine</h2>
+        <div class="clear">
+            <section class="content details">
+                <h3 class="hidden">détailles</h3>
+                <?php the_field( 'details' ); ?>
+            </section>
+            <section class="content formSection">
+                <h3 class="hidden">Formulaire d'abonnement</h3>
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php the_content(); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </section>
+        </div>
+    </article>
 
 <?php get_footer(); ?>

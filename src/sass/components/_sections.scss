@@ -27,7 +27,12 @@
         padding: 0.25em 1em 0.25em 4.166666667%;
         line-height: 1.7;
         background-color: $titleBcg;
+        border: 1px solid $mainColor;
         border-top-right-radius: 3rem;
+        &:hover{
+            background: linear-gradient(45deg, rgba(132, 183, 78, 1) 0%, rgba(193, 218, 165, 1) 50%, rgba( 132, 183, 78, 1) 100%);
+            border: 1px solid $mainColor;
+        }
     }
     &__content{
         position: relative;
@@ -40,9 +45,9 @@
     &__subTitle{
         display: block;
         width: 70.833333333%;
+        max-width: 91.5rem;
         margin: 4rem auto;
         font-size: 2.5rem;
-        text-align: center;
         line-height: 1.7;
         &--fiches{
             padding-bottom: 6rem;
@@ -50,11 +55,13 @@
     }
     &__textBlock{
         width: 70.833333333%;
+        max-width: 91.5rem;
         margin: 4rem auto;
         padding: 4rem;
     }
     &__legend{
         width: 70.833333333%;
+        max-width: 91.5rem;
         margin: 4rem auto 0rem;
     }
     &__checkbox{
@@ -91,6 +98,12 @@
     }
     &__contact{
         margin-bottom: 4rem;
+        width: 47.368421053%;
+        margin-right: 5.263157895%;
+        float: left;
+        &:last-child{
+            margin-right: 0;
+        }
         &--schedule{
             max-width: 32.5rem;
             min-width: 22.5rem;
@@ -106,8 +119,10 @@
             box-shadow: $mainShadow;
         }
         &--gmap{
-            width: 100%;
+            width: 50%;
             height: 20.5rem;
+            margin-right: 4.1%;
+            float: right;
             border: 0.1rem solid $borderColor;
             box-shadow: $mainShadow;
         }
@@ -120,6 +135,18 @@
 }
 
 // ===== media query =====
+@media screen and (min-width: 1220px) {
+    .mainSection{
+        &__maps{
+            &--gmap{
+                width: 100%;
+                margin-right: 0;
+                border: none;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
     .mainSection{
         &__subTitle{
@@ -152,6 +179,9 @@
     .mainSection{
         &__contact{
             width: 60%;
+        }
+        &__maps{
+            clear: both;
         }
     }
 }

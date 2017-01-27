@@ -34,7 +34,7 @@ var
     oImagesOpts = {
         // *.* => "expression régulière quelque chose . quelque chose"
         in: sSource + 'images/*.*',
-        out: sDest + 'images/',
+        out: sDest + 'img/',
         watch: sSource + 'images/*.*'
     },
     oImageUriOpts = {

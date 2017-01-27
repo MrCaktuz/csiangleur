@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    margin-bottom: 36rem;
+    margin-bottom: 35.2rem;
 }
 
 .content{
@@ -50,5 +50,9 @@ strong{
 @media screen and (max-width: 650px) {
     body{
         margin-bottom: 0;
+    }
+
+    p{
+        font-size: 1.6rem;
     }
 }

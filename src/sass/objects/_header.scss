@@ -7,7 +7,7 @@
  */
 
 .header{
-    padding-top: 4rem;
+    padding-top: 2rem;
     background-color: $pageBcg;
     &__logo{
         width: 15rem;
@@ -17,7 +17,7 @@
     }
     &__title{
         width: 39.583333333%;
-        margin: 3.5rem 0 0 2.083333333%;
+        margin: 2.5rem 0 0 2.083333333%;
         font-family: $philosopherStack;
         font-size: 4rem;
         line-height: 1.2;
@@ -26,14 +26,24 @@
     }
     &__photo{
         width: 100%;
-        height: auto;
+        height: 40rem;
+        background: linear-gradient(100deg, rgba(131,181,77,0.75) 0%, rgba(255,255,255,0.75) 100%), url( '../img/house.jpg' ) center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
 // ===== media query =====
+@media screen and (min-width: 1500px) {
+    .header{
+        &__title{
+            margin-top: 5rem;
+        }
+    }
+}
 @media screen and (max-width: 810px) {
     .header{
-        background: linear-gradient(100deg, rgba(255,255,255,0.9) 0%,rgba(131,181,77,0.9) 100%), url( '../images/house.jpg' ) center;
+        background: linear-gradient(100deg, rgba(255,255,255,0.9) 0%,rgba(131,181,77,0.9) 100%), url( '../img/house.jpg' ) center;
         background-size: cover;
         background-repeat: no-repeat;
         &__title{

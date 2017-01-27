@@ -7,6 +7,7 @@
  */
 
 .form{
+    max-width: 150rem;
     padding: 4rem 4.166666667% 4rem;
     &__group{
         position: relative;
@@ -34,9 +35,11 @@
         font-size: 1.8rem;
         font-family: $openSansStack;
         border: 0.1rem solid $borderColor;
+        outline: none;
         &--textarea{
             margin-left: 22.727272727%;
             resize: vertical;
+            outline: none;
         }
         &:focus{
             box-shadow: $focusShadow;
@@ -48,8 +51,8 @@
         border: 0.1rem solid $borderColor;
         cursor: pointer;
         &:hover{
-            box-shadow: $hoverShadow;
-            border-color: $white;
+            background: linear-gradient(45deg, rgba(132, 183, 78, 1) 0%, rgba(193, 218, 165, 1) 50%, rgba( 132, 183, 78, 1) 100%);
+            border-color: $mainColor;
         }
     }
 }

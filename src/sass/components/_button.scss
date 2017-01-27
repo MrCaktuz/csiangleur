@@ -21,8 +21,8 @@
     background-color: $buttonBcg;
     transition: 0.1s ease-in-out;
     &:hover{
-        box-shadow: $hoverShadow;
-        border: 1px solid $white;
+        background: linear-gradient(45deg, rgba(132, 183, 78, 1) 0%, rgba(193, 218, 165, 1) 50%, rgba( 132, 183, 78, 1) 100%);
+        border: 1px solid $mainColor;
     }
     &__container{
         position: absolute;

@@ -9,7 +9,7 @@
 // Shadow
 $mainShadow: 0px 2px 10px 0px rgba(0,0,0,0.08);
 $hoverShadow: 0px 0px 10px 0px rgba(0,0,0,0.20);
-$focusShadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+$focusShadow: 0px 0px 10px 0px rgba(132, 183, 78, 0.50);
 
 // main color
 $white: #fff;
@@ -28,4 +28,5 @@ $pageBcg: $white;
 $sloganBcg: $mainColorTransparent;
 $titleBcg: $mainColor;
 $buttonBcg: $mainColor;
+$buttonHoverBcg: #C1DAA5;
 $submitBcg: $mainColor;
